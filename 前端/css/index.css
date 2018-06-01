@@ -1,0 +1,27 @@
+body{
+  padding-top: 70px;/*有顶部固定导航条时设置*/
+  padding-bottom: 70px;/*有底部固定导航条时设置*/
+
+}
+.centerbox1{
+    margin: 0 auto;
+    width: 500px;
+}
+.centerbox2{
+  margin: 0 auto;
+  width: 200px;
+}
+#logo{
+  width: 200px;
+}
+#navbar1{
+  position: fixed;
+  top: 80px;
+  width: 100%;
+}
+.nav-item{
+	width: 120px;
+}
+#maindrop{
+	  height: 800px;
+}

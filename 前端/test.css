@@ -1,0 +1,89 @@
+.container{  
+    width:100%;  
+    height: 100%;  
+    position: absolute;  
+    left: 0;  
+    top:0;  
+    background:#adf;  
+    overflow: hidden;  
+}  
+.tabCon{  
+    width:25%;  
+    display: block;  
+    height: 40px;  
+    position: absolute;  
+    bottom:0;  
+    left:0;  
+    z-index: 2;  
+    line-height: 40px;  
+    text-align: center;  
+    background:deepskyblue;  
+}  
+#tab2 ,#tab2 +a{  
+    left: 25%;  
+}  
+#tab3 ,#tab3 +a{  
+    left: 50%;  
+}  
+#tab4 ,#tab4 +a{  
+    left: 75%;  
+}  
+input.tabCon {  
+    z-index: 5;  
+    opacity:0;  
+    border:none;  
+    cursor: pointer;  
+}  
+input.tabCon:checked+a{  
+    background:#eee;  
+}  
+input.tabCon:checked+a:after{  
+    display: block;  
+    width:0;  
+    height: 0;  
+    content:'';  
+    bottom:100%;  
+    border:20px solid transparent;  
+    position: absolute;  
+    left:50%;  
+    margin-left:-20px;  
+    border-bottom-color:#eee;  
+}  
+/* section */  
+.container section{  
+    height:100%;  
+    position: relative;  
+}  
+.container section{  
+    transition:all .5s .1s;  
+    -ms-transform:translate3d(0,0,0);  
+    transform:translate3d(0,0,0);  
+}  
+.f1{  
+    background: #ddd;  
+}  
+.f2{  
+    background: purple;  
+}  
+.f3{  
+    background: darkcyan;  
+}  
+.f4{  
+    background: yellowgreen;  
+}  
+#tab1:checked ~ .floor{  
+    -ms-transform:translateY(0);  
+    transform:translateY(0);  
+}  
+#tab2:checked ~ .floor{  
+    -ms-transform:translateY(-100%);  
+    transform:translateY(-100%);  
+}  
+#tab3:checked ~ .floor{  
+    -ms-transform:translateY(-200%);  
+    transform:translateY(-200%);  
+}  
+#tab4:checked ~ .floor{  
+    -ms-transform:translateY(-300%);  
+    transform:translateY(-300%);  
+}  
