@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/form.css" >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap-4.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        $("#cardNumber").hide();
+        $("#money").hide();
+        $("#iscardLabel").hide();
+        $(":radio").click(function(){
+          var $val = $(this).val();
+          if ($val == "guanliyuan") {
+            $("#name").html("管理员账号");
+            $("#nameinput").attr("placeholder","输入管理员账号");
+            $("#iscardLabel").hide();
+          }
+          else if ($val == "student") {
+            $("#name").html("学号");
+            $("#nameinput").attr("placeholder","输入学号");
+            $("#iscardLabel").show();
+          }
+        });
+
+        $("#iscard").click(function(){
+          var $isChecked = $("#iscard").is(":checked");
+          if ($isChecked) {
+            $("#cardNumber").show();
+            $("#money").show();
+          }
+          else{
+            $("#cardNumber").hide();
+            $("#money").hide();
+          }
+        });
+      });
+      
+    </script>
+    <title>登录</title>  
+  </head>
+  <body class="bg-light">
+
+    <div id="body" class="centerbox1">
+    <!--表单-->
+      <h2>你可以登记学生/管理员~</h2>
+      <br>
+      <form class="form-control" role="form" action="index.html">
+        
+        <div class="form-group">
+          <label id="name" for="name">姓名:</label>
+          <input type="text" class="form-control" placeholder="输入姓名">
+        </div>
+        <div class="form-group">
+          <label id="sex" for="sex">性别:</label>
+          <input type="sex" class="form-control" placeholder="输入性别">
+        </div>
+        <div class="form-group">
+          <label id="acc" for="acc">管理员账号:</label>
+          <input type="text" class="form-control" placeholder="输入管理员账号">
+        </div>
+        <div class="form-group">
+          <label id="password" for="password">密码:</label>
+          <input type="password" class="form-control" placeholder="输入密码">
+        </div>
+        <label id="iscardLabel">
+          <input id="iscard" type="checkbox" value="">是否开卡
+        </label>
+        <div id="cardNumber" class="form-group" >
+          <label  for="cardNumber" >卡号:</label>
+          <input type="number" class="form-control" placeholder="输入卡号">
+        </div>
+        <div id="money" class="form-group" >
+          <label for="money">初始金额:</label>
+          <input type="number" class="form-control" placeholder="输入金额">
+        </div>
+
+        <div class="checkbox">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="guanliyuan" checked>
+        管理员
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="student">
+        学生
+          </label>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">登记</button>
+      </form>
+
+    </div>
+  </body>
+
+</html>

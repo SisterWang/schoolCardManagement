@@ -1,7 +1,6 @@
 body{
   padding-top: 80px;/*有顶部固定导航条时设置*/
-  padding-bottom: 70px;/*有底部固定导航条时设置*/
-
+  padding-bottom: 80px;/*有底部固定导航条时设置*/
 }
 .centerbox1{
     margin: 0 auto;
@@ -13,15 +12,4 @@ body{
 }
 #logo{
   width: 200px;
-}
-#navbar1{
-  position: fixed;
-  top: 80px;
-  width: 100%;
-}
-.nav-item{
-	width: 120px;
-}
-#maindrop{
-	  height: 850px;
 }

@@ -1,5 +1,5 @@
 body{
-  padding-top: 80px;/*有顶部固定导航条时设置*/
+  padding-top: 40px;/*有顶部固定导航条时设置*/
   padding-bottom: 80px;/*有底部固定导航条时设置*/
 }
 .centerbox1{

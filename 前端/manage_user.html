@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/manage_user.css" >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap-4.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        var $iframe = $("#mainif");
+
+        //添加消费记录
+        $("#addconsume").click(function(){
+          $iframe.attr("src","addconsume.html");
+        });
+        //删除消费记录
+        $("#deleconsume").click(function(){
+          $iframe.attr("src","deleconsume.html");
+        });
+        //查询消费记录
+        $("#consume").click(function(){
+          $iframe.attr("src","consume.html");
+        });
+        //添加充值记录
+        $("#addcharged").click(function(){
+          $iframe.attr("src","addcharged.html");
+        });
+        //删除充值记录
+        $("#delecharged").click(function(){
+          $iframe.attr("src","delecharged.html");
+        });
+        //查询充值记录
+        $("#recharged").click(function(){
+          $iframe.attr("src","recharged.html");
+        });
+        //管理校园卡状态
+        $("#state").click(function(){
+          $iframe.attr("src","state.html");
+        });
+        //充值
+        $("#recharge").click(function(){
+          $iframe.attr("src","recharge.html");
+        });
+
+      })
+    </script>
+    <title>用户列表</title>  
+  </head>
+  <body class="bg-light">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="manage.html">管理用户</a></li>
+        <li class="breadcrumb-item active" aria-current="page">曹金鹏</li>
+      </ol>
+    </nav>
+    
+    <nav class="navbar leftlist">
+ 
+      <!-- Links -->
+      <ul class="navbar-nav ">
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">管理消费记录</a>
+          <div class="dropdown-menu">
+            <a id="addconsume" class="dropdown-item" href="#">添加消费记录</a>
+            <a id="deleconsume" class="dropdown-item" href="#">删除消费记录</a>
+            <a id="consume" class="dropdown-item" href="#">查看消费记录</a>
+          </div>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">管理充值记录</a>
+          <div class="dropdown-menu">
+            <a id="addcharged" class="dropdown-item" href="#">添加充值记录</a>
+            <a id="delecharged" class="dropdown-item" href="#">删除充值记录</a>
+            <a id="recharged" class="dropdown-item" href="#">查看充值记录</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a id="state" class="nav-link" href="#">管理校园卡状态</a>
+        </li>
+        <li class="nav-item">
+          <a id="recharge" class="nav-link" href="#">充值</a>
+        </li>
+
+      </ul> 
+    </nav>
+      
+    </ul>
+
+    <div id="body" class="centerbox1">
+  
+    <iframe id="mainif" src="addconsume.html" frameborder="0" scrolling="no" allowfullscreen="yes" style="width: 100%;height: 100%;display: block;"></iframe>
+
+    </div>
+  </body>
+
+</html>

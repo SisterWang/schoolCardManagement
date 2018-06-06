@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/manage_user.css" >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap-4.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+  <title>添加消费记录</title>
+</head>
+<body class="bg-light">
+  <h2>管理校园卡状态</h2>
+  <br/>
+  <form class="form-control" role="form" action="#">  
+    <div class="form-group">
+      <label for="sel1">选择状态</label>
+      <select class="form-control" id="sel1">
+        <option class="bg-success text-white">正常</option>
+        <option class="bg-warning text-white">欠费</option>
+        <option class="bg-warning text-white">挂失</option>
+        <option class="bg-warning text-white">冻结</option>
+        <option class="bg-danger text-white">注销</option>
+      </select>
+    </div>  
+    <button type="submit" class="btn btn-primary">更改</button>
+  </form>
+</body>
+</html>

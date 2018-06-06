@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.1.1-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/manage_user.css" >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap-4.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+	<title>添加充值记录</title>
+</head>
+<body class="bg-light">
+	<h2>添加充值记录</h2>
+	<br/>
+	<form class="form-control" role="form" action="#">  
+    	<div class="form-group">
+          <labe>充值种类:</label>
+          <select class="form-control" id="sel1" placeholder="输入充值种类">
+            <option>线上</option>
+            <option>线下</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>充值时间:</label>
+          <input type="date" class="form-control" placeholder="输入充值时间">
+        </div>
+        <div class="form-group">
+          <label>充值金额:</label>
+          <input type="text" class="form-control" placeholder="输入充值金额">
+        </div>
+        <button type="submit" class="btn btn-primary">添加</button>
+    </form>
+</body>
+</html>

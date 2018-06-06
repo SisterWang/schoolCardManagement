@@ -21,6 +21,16 @@
       $(function(){
         var $iframe = $("#mainif");
 
+        //登记用户
+        $("#enroll").click(function(){
+          $iframe.attr("src","enroll.html");
+        });
+
+        //管理用户
+        $("#manage").click(function(){
+          $iframe.attr("src","manage.html");
+        });
+
         //查询余额
         $("#balance").click(function(){
           $iframe.attr("src","balance.html");
@@ -63,7 +73,7 @@
         });
       });
     </script>
-    <title>校园卡管理系统-学生</title>  
+    <title>校园卡管理系统-管理员</title>  
   </head>
   <body class="bg-light">
     <!--头-->
@@ -72,50 +82,19 @@
         <img src="img/logo1.png" alt="Logo" style="width:70px;">
       </a>
       <ul id="sel" class="navbar-nav">
-          <li id="balance" class="nav-item active">
-            <a class="nav-link" href="#">查询余额</a>
+         <li id="enroll" class="nav-item active">
+            <a class="nav-link" href="#">登记用户</a>
           </li>
-          <li id="consume" class="nav-item">
-            <a class="nav-link" href="#">查询消费</a>
-          </li>
-          <li id="recharged" class="nav-item">
-            <a class="nav-link" href="#">查询充值</a>
-          </li>
-          <li id="recharge" class="nav-item">
-            <a class="nav-link" href="#">在线充值</a>
-          </li>
-          <li id="belosed" class="nav-item">
-            <a class="nav-link" href="#">挂失校园卡</a>
-          </li>
-          <li id="cancel" class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#mymodal">注销校园卡</a>
-          </li>
-          <li id="more" class="nav-item">
-            <a class="nav-link disabled" href="#">更多功能</a>
+          <li id="manage" class="nav-item">
+            <a class="nav-link" href="#">管理用户</a>
           </li>
       </ul>
     </nav>
-    <div id="maindrop" class="centerbox1">
-      <iframe id="mainif" src="balance.html" frameborder="0" scrolling="no" allowfullscreen="yes" style="width: 100%;height: 100%;display: block;"></iframe>
+
+    <div id="maindrop" class="">
+      <iframe id="mainif" src="enroll.html" frameborder="0" scrolling="no" allowfullscreen="yes" style="width: 100%;height: 100%;display: block;"></iframe>
     </div>
-    
-    <!-- 模态框 -->
-    <div class="modal fade" id="mymodal">
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title text-danger">警告</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>此操作确认后无法恢复，确认要注销吗？</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">已经了解</button>
-              </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+
   </body>
 
 </html>
